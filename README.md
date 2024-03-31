@@ -1,7 +1,8 @@
 This plugin was made for the Minecraft server Astra and access to others is granted through the current project license.
 
 The purpose of this plugin is to unlock a skill-tree ability via command.
-Command Usage: /rpgst <player> <skillTreeNodeId> <level>
+
+``Command Usage: /rpgst <player> <skillTreeNodeId> <level>``
 
 The arg SkillTreeNodeId refers to the following:
 ![sample](https://github.com/Pryzinho/MMOCoreAstraAddon/assets/62448318/30f29048-4af5-4cb3-b272-8e5a26960dd6)
