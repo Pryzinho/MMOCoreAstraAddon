@@ -1,0 +1,9 @@
+name: MMOCoreAstra
+version: '${project.version}'
+main: br.pry.mcoreaddon.CompatMain
+depend:
+  - MMOCore
+api-version: '1.20'
+commands:
+  rpgst:
+    description: Adiciona skill-tree pra jogador.
