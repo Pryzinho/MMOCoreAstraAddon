@@ -12,4 +12,4 @@ In this example the SkillTreeNodeId would be a1, then the command will be:
 
 This will set the tree node level to 1.
 
-PSA: This command does not differentiate between skill trees, so make sure the SkillTreeNodeId is unique among all existing skill trees. Having more than one node with the same name, even if it's in different skill trees, will cause an issue.
+**PSA: This command does not differentiate between skill trees, so make sure the SkillTreeNodeId is unique among all existing skill trees. Having more than one node with the same name, even if it's in different skill trees, will cause an issue.**
