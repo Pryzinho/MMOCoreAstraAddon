@@ -1,5 +1,6 @@
 package br.pry.mcoreaddon;
 
+import net.Indyuce.mmocore.api.MMOCoreAPI;
 import net.Indyuce.mmocore.api.player.PlayerData;
 import net.Indyuce.mmocore.skilltree.SkillTreeStatus;
 import net.kyori.adventure.text.minimessage.MiniMessage;
@@ -35,25 +36,27 @@ public final class CompatMain extends JavaPlugin implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-      // rpgst <jogador> <skillTreeNodeId> <level>
+      // Example usage: /rpgst <Player> <skillTreeNodeId> <Level>
         if (!sender.hasPermission("mmocore.admin")) {
             sender.sendMessage(MiniMessage.miniMessage().deserialize("<red>You don't have the permission to do that."));
-            return false;
+            return true;
         }
         if (args.length != 3) {
-            sender.sendMessage(MiniMessage.miniMessage().deserialize("<red>Use: /rpgst <player> <skillTreeNodeId> <level>."));
-            return false;
+            sender.sendMessage(MiniMessage.miniMessage().deserialize("<red>Use: /rpgst <Player> <skillTreeNodeId> <Level>"));
+            return true;
         }
 
         Player t = Bukkit.getPlayerExact(args[0]);
         if (t == null) {
             sender.sendMessage(MiniMessage.miniMessage().deserialize("<red>Targeted player is offline or invalid!"));
-            return false;
+            return true;
         }
 
         PlayerData pd = PlayerData.get(t.getUniqueId());
         try {
             int level = Integer.parseInt(args[2]);
+            // Get all nodes on the player data, note that get nodes from all skill-trees.
+
             pd.getNodeStates().keySet().forEach(nodet -> {
                 if (nodet.getId().equalsIgnoreCase(args[1])) {
                     pd.setNodeState(nodet, SkillTreeStatus.UNLOCKED);

@@ -1,9 +1,11 @@
 name: MMOCoreAstra
 version: '${project.version}'
+author: Pry
+website: github.com/Pryzinho
 main: br.pry.mcoreaddon.CompatMain
 depend:
   - MMOCore
 api-version: '1.20'
 commands:
   rpgst:
-    description: Adiciona skill-tree pra jogador.
+    description: Unlock a skill-tree ability.
