@@ -1,5 +1,6 @@
-This plugin was made for the Minecraft server Astra and access to others is granted through the current project license.
+**This repository is no longer maintained. If you need something similar, take a look at the Phoenix API or get assistance on their Discord.**
 
+This plugin was made for the Minecraft server Astra and access to others is granted through the current project license.
 The purpose of this plugin is to unlock a skill-tree ability via command.
 
 ``Command Usage: /rpgst <player> <skillTreeNodeId> <level>``
